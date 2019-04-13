@@ -8,5 +8,4 @@ import retrofit2.http.GET;
 public interface JSONPlaceHolderApi {
     @GET("/bins/ovdb8")
     public Call<PostResponse> getData();
-
 }
