@@ -1,18 +1,11 @@
-package com.example.myapplication.rest;
+package com.example.myapplication2.rest;
 
-import android.support.annotation.NonNull;
-
-import com.example.myapplication.rest.DTOs.PostResponse;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkService {
     private static NetworkService mInstance;
-    private static final String BASE_URL = "https://api.myjson.com";
+    private static final String BASE_URL = "http://api.myjson.com";
     private Retrofit mRetrofit;
 
     private NetworkService() {
