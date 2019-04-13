@@ -1,2 +1,13 @@
 .idea/*
-.gradle/*
+
+.gradle
+build/
+
+gradle-app.setting
+
+!gradle-wrapper.jar
+
+.gradletasknamecache
+
+**/build/
+
