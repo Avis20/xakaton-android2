@@ -5,7 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkService {
     private static NetworkService mInstance;
-    private static final String BASE_URL = "http://api.myjson.com";
+//    private static final String BASE_URL = "http://api.myjson.com";
+    private static final String BASE_URL = "http://192.168.0.47:8080";
     private Retrofit mRetrofit;
 
     private NetworkService() {

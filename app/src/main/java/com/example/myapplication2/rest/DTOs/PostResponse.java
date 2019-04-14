@@ -5,19 +5,10 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PostResponse {
-    @SerializedName("test12")
-    @Expose
-    private String test12;
-
-    public String getTest12() { return test12; }
-
-    public void setTest12(String test12) {
-        this.test12 = test12;
-    }
-
-    @SerializedName("Recipes")
+    @SerializedName("recipes")
     @Expose
     private ArrayList<DataObject> Recipes;
 
@@ -37,10 +28,22 @@ public class PostResponse {
         @Expose
         private String cookTime;
 
-        public String RecipeName() {
+        @SerializedName("ingredients")
+        @Expose
+        private List<String> ingredients;
+
+        @SerializedName("algorithm")
+        @Expose
+        private String algorithm;
+
+        @SerializedName("searchAccuracy")
+        @Expose
+        private Double searchAccuracy;
+
+        public String getRecipeName() {
             return recipeName;
         }
-        public void RecipeName(String name) {
+        public void setRecipeName(String name) {
             this.recipeName = recipeName;
         }
 
@@ -49,6 +52,30 @@ public class PostResponse {
         }
         public void setCookTime(String cookTime) {
             this.cookTime = cookTime;
+        }
+
+        public List<String> getIngredients() {
+            return ingredients;
+        }
+
+        public void setIngredients(List<String> ingredients) {
+            this.ingredients = ingredients;
+        }
+
+        public String getAlgorithm() {
+            return algorithm;
+        }
+
+        public void setAlgorithm(String algorithm) {
+            this.algorithm = algorithm;
+        }
+
+        public Double getSearchAccuracy() {
+            return searchAccuracy;
+        }
+
+        public void setSearchAccuracy(Double searchAccuracy) {
+            this.searchAccuracy = searchAccuracy;
         }
     }
 }
